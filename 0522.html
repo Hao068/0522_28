@@ -3,10 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>MindAR 名片</title>
-
     <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.2/dist/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-
     <style>
         body { 
             margin: 0; 
@@ -14,11 +12,10 @@
         }
     </style>
 </head>
-
 <body>
     <a-scene
         mindar-image="
-            imageTargetSrc: ./card1.mind;
+            imageTargetSrc: ./targets.mind;
             autoStart: true;
             uiLoading: true;
             uiError: true;
@@ -29,15 +26,11 @@
         vr-mode-ui="enabled: false"
         device-orientation-permission-ui="enabled: false"
     >
-
         <a-assets>
             <img id="resultImg" src="./card1.jpg" />
         </a-assets>
-
         <a-light type="ambient" intensity="1"></a-light>
-
         <a-camera look-controls="enabled: false"></a-camera>
-
         <a-entity mindar-image-target="targetIndex: 0">
             <a-plane 
                 src="#resultImg"
@@ -56,7 +49,6 @@
                 ">
             </a-plane>
         </a-entity>
-
     </a-scene>
 </body>
 </html>
